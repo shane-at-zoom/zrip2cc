@@ -94,12 +94,12 @@ npm start
 
 # Zoom Room Setup
 
-*Sign in to the [Zoom web portal](https://zoom.us).
-*Click Room Management > Zoom Rooms.
-*Click the Edit to the right of the Zoom Room name.
-*Under Devices, toggle Enable Room Controls to on (blue). 
-*Click Create Profile.
-*Enter the json configuration for this room. 
+* Sign in to the [Zoom web portal](https://zoom.us).
+* Click Room Management > Zoom Rooms.
+* Click the Edit to the right of the Zoom Room name.
+* Under Devices, toggle Enable Room Controls to on (blue). 
+* Click Create Profile.
+* Enter the json configuration for this room. 
 
 > NOTE: The json configuration can be found in [controller.json](controller.json).  Edit the IP address to match your dev machine.
 
