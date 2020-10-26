@@ -70,7 +70,7 @@ Example: ```HUE_TOKEN=7fbb0cd252f3787c2b81892b03d8a9```.
 
 Enter the IP Address of your Philips Hue Bridge in your `.env` file.  
 
-Example: ```HUE_BRIDGE=0.0.0.0```.
+Example: ```HUE_BRIDGE=192.168.1.2```.
 
 If you have multiple lights connected to your Philips Hue Bridge, specify that in your `.env` file.  The default is light ```1```.  
 

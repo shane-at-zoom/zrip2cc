@@ -2,7 +2,7 @@
     "adapters": [
         {
             "model": "GenericNetworkAdapter",
-            "ip": "tcp://192.16.1.1:4999",
+            "ip": "tcp://192.168.1.1:4999",
             "ports": [{
                 "id": "hue_light",
                 "name": "Hue Go Lamp!",
@@ -14,12 +14,34 @@
                         "params": [{"id":"on", "name":"On", "value":"{\"hue_light\":\"on\"}"},
                         {"id":"off", "name":"Off", "value":"{\"hue_light\":\"off\"}"}],
                         "type": "actions"
+                    },
+                    {
+                        "id": "color",
+                        "name": "Colors",
+                        "command": "%\r",
+                        "params": [{"id":"red", "name":"Red", "value":"{\"hue_light\":\"red\"}"},
+                        {"id":"yellow", "name":"Yellow", "value":"{\"hue_light\":\"yellow\"}"},
+                        {"id":"green", "name":"Green", "value":"{\"hue_light\":\"green\"}"},
+                        {"id":"blue", "name":"Blue", "value":"{\"hue_light\":\"blue\"}"}],
+                        "type": "actions"
+                    },
+                    {
+                        "id": "bri",
+                        "name": "Brightness",
+                        "command": "%\r",
+                        "params": [{"id":"up", "name":"up", "value":"{\"hue_light\":\"up\"}"},
+                        {"id":"down", "name":"down", "value":"{\"hue_light\":\"down\"}"}],
+                        "type": "actions"
                     }
                 ]
             }]
         }
     ],
     "styles":[
-        "hue_light.icon=icon_light"
+        "hue_light.icon=icon_light",
+        "hue_light.power.icon=icon_power",
+        "hue_light.bri.icon=icon_hot",
+        "hue_light.bri.up.icon=icon_up",
+        "hue_light.bri.down.icon=icon_down"
     ]
 }

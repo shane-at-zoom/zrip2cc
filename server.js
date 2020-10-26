@@ -4,7 +4,7 @@ const hue = require('./config.js').hue;
 const hue_put = require('./hue_put.js');
 const Net = require('net');
 const port = config.port;
-
+var brightness = 150;
 
 const server = new Net.Server();
 
@@ -29,6 +29,26 @@ server.on('connection', function(socket) {
                     break;
                 case 'off':
                     hue_put({on: false, sat: hue.SAT_HIGH, bri: hue.g_BRI, hue: hue.COLOR_WHITE});
+                    break;
+                case "red":
+                    hue_put({on: true, hue: hue.COLOR_RED});
+                    break;
+                case "yellow":
+                    hue_put({on: true, hue: hue.COLOR_YELLOW});
+                    break;
+                case "green":
+                    hue_put({on: true, hue: hue.COLOR_GREEN});
+                    break;
+                case "blue":
+                    hue_put({on: true, hue: hue.COLOR_BLUE});
+                    break;
+                case "up":
+                    brightness = brightness + 10;
+                    hue_put({on: true, bri: brightness});
+                    break;
+                case "down":
+                    brightness = brightness - 10;
+                    hue_put({on: true, bri: brightness});
                     break;
             }
         }
