@@ -22,7 +22,7 @@ Assuming macOS 10.15+.
 Clone and install the app and it's dependencies. We'll be using [dotenv](https://www.npmjs.com/package/dotenv) for our credentials, and [winston](https://www.npmjs.com/package/winston) for logging. 
 
 ```bash
-git clone https://github.com/will4950/zrip2cc
+git clone https://github.com/shane-at-zoom/zrip2cc
 ```
 
 ```bash
